@@ -1,0 +1,5 @@
+node_modules
+data.pth
+user_audio.wav
+_pycache_
+signin/node_modules
