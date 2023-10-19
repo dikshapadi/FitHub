@@ -1,2 +1,5 @@
 node_modules
-.env
+data.pth
+user_audio.wav
+pycache
+signin/node_modules
