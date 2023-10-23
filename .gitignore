@@ -1,5 +1,5 @@
 node_modules
 data.pth
 user_audio.wav
-pycache
+_pycache_
 signin/node_modules

@@ -168,6 +168,7 @@ class ConversationalUI(QtWidgets.QWidget):
                 self.start_recording_button.setEnabled(True)
 
 
+
     def speak(self, text):
         self.engine.say(text)
         self.engine.runAndWait()
@@ -180,8 +181,7 @@ class ConversationalUI(QtWidgets.QWidget):
         bot_response = self.get_bot_response(user_input)
         self.display_response("FitHub", bot_response)
 
-        # Speak the bot's response using pyttsx3
-        self.speak(bot_response)
+       
 
     def record_and_send(self):
         audio_input_file = "user_audio.wav"
@@ -209,8 +209,6 @@ class ConversationalUI(QtWidgets.QWidget):
         bot_response = self.get_bot_response(text_input)
         self.display_response("FitHub", bot_response)
 
-        # Speak the bot's response using pyttsx3
-        self.speak(bot_response)
 
     def get_bot_response(self, user_input):
         sentence = tokenize(user_input)
@@ -229,7 +227,6 @@ class ConversationalUI(QtWidgets.QWidget):
             for intent in intents['intents']:
                 if tag == intent["tag"]:
                     response = random.choice(intent['responses'])
-                    self.speak(response)  # Speak the response
                     return response
         else:
             return "I do not understand..."
