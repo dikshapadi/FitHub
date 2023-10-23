@@ -59,6 +59,7 @@ num_epochs = 1000
 batch_size = 8
 learning_rate = 0.001
 input_size = len(X_train[0])
+#input_size = max(len(bag) for bag in X_train) can be used for more accurate training
 hidden_size = 8
 output_size = len(tags)
 print(input_size, output_size)
