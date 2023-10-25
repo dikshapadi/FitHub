@@ -80,10 +80,7 @@ class ChatDataset(Dataset):
         return self.n_samples
 
 dataset = ChatDataset()
-train_loader = DataLoader(dataset=dataset,
-                          batch_size=batch_size,
-                          shuffle=True,
-                          num_workers=0)
+train_loader = DataLoader(dataset=dataset,batch_size=batch_size,shuffle=True,num_workers=0)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
